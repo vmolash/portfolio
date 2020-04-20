@@ -1,0 +1,66 @@
+// top bar menu
+header {
+    @extend %bar; // extend shallow class bar
+    input[type=checkbox] {
+        position: absolute;
+        top: -999em;
+        left: -999em;
+        &:checked ~ nav {
+            height: auto;
+            overflow: hidden;
+        }
+    }
+    label {
+        display: block;
+        background: url(../images/hamburger-menu.png)no-repeat right center;
+        text-indent: -999em;
+        height: 44px;
+        cursor: pointer;
+        @include browsers; // include mixin browsers
+        user-select: none;
+        position: relative;
+        top: 2px;
+        right: 8px;
+        @include break(500px) { display: none; }
+    }
+    nav {
+        height: 0;
+        overflow: hidden;
+        @include break(500px) {
+            height: 100%;
+            overflow: visible;
+        }
+        ul{
+            @include break(0, 630px) { .logo { display: none; } }
+            li {
+                border-radius: 5px;
+                @include linx($nav-color, $heading-color, $red);
+                &:hover {
+                    background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
+                    &:first-of-type { background-color: transparent; }
+                }
+                a { 
+                    font-weight: bold;
+                    display: block;
+                    padding: 12px 10px;
+                    text-transform: uppercase;
+                }
+            } 
+            @include break(500px) {
+                display: flex;
+                justify-content: center;
+                li:first-of-type { margin-right: auto; }
+                li {
+                    a {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 56px;
+                        &.logo { padding: 0; }
+                    }
+                }
+            }
+        }
+    }
+} 
