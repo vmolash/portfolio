@@ -4,6 +4,39 @@ img {
     height: auto;
     border-radius: nth($pd, 2);
 }
+
+// PORTFOLIO
+/* Section Images */
+main {
+    position: relative;
+}
+section#home {
+    background: url(../../dist/images/coding_home.jpg) no-repeat
+      center center/cover;
+  }
+  section#home:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(68, 68, 68, 0.9); }
+  
+  section#skills {
+    background: url(../../dist/images/skills.jpg) no-repeat
+      center center/cover;
+  }
+  section#projects {
+    background: url(../../dist/images/projects.jpg) no-repeat
+      center center/cover;
+  }
+  
+  section#contact {
+    background: url(../../dist/images/contact.jpg) no-repeat
+      center center/cover;
+  }
 .pr-fly {
     background: url(../../dist/images/flyranch.jpg) no-repeat center center;
     width: 320px;
@@ -14,6 +47,10 @@ img {
     width: 320px;
     height: 340px;
 }
+// end PORTFOLIO
+
+
+
 figure { // nested 2 level
     margin: 15px 0;
     text-align: center;
