@@ -407,13 +407,13 @@ ul.tech li:hover {
 h1, h2, h3 {
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 9rem;
+  padding-top: 6rem;
   margin-left: 17px;
   font-weight: 400;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 8rem;
 }
 
 h2 {
@@ -437,7 +437,7 @@ main aside a:hover {
 }
 
 main aside a:active {
-  color: darkred;
+  color: #2a8a2a;
 }
 
 body {
@@ -446,12 +446,26 @@ body {
   overflow: hidden;
 }
 
-body p, body li, body a {
-  font-size: 1.8rem;
+body p, body li, body a, span {
+  font-size: 2.2rem;
+}
+
+#contact p {
+  font-size: 3.8rem;
 }
 
 i {
-  background-color: white;
+  margin-right: 15px;
+}
+
+.cont li {
+  margin-bottom: 1.5rem;
+}
+
+.cont li a {
+  display: flex;
+  align-items: flex-end;
+  justify-items: flex-start;
 }
 
 body a {
@@ -481,6 +495,21 @@ footer a:hover {
 
 header a {
   letter-spacing: .14em;
+}
+
+.active {
+  color: #93d293;
+  transition: all 0.5s ease-in-out;
+}
+
+.name {
+  color: #444;
+  font-size: 8.0rem;
+}
+
+.fact {
+  color: #444;
+  font-size: 5rem;
 }
 
 .proj {
@@ -567,7 +596,7 @@ header nav ul li a:hover {
 }
 
 header nav ul li a:active {
-  color: darkred;
+  color: #2a8a2a;
 }
 
 header nav ul li:hover:first-of-type {
@@ -612,12 +641,12 @@ header {
 }
 
 .logo {
-  transition: all 0.3s ease-in-out;
+  width: 200px;
 }
 
 .logo:hover {
   z-index: 2;
-  font-size: 140%;
+  font-size: 120%;
 }
 
 img {
@@ -657,9 +686,9 @@ section {
 
 section#home::after {
   background: url(../../dist/images/coding_home.jpg) no-repeat center center/cover;
-  content: " ";
+  content: "";
   position: absolute;
-  opacity: 0.6;
+  opacity: 0.5;
   top: 0;
   right: 0;
   width: 100%;
@@ -671,7 +700,7 @@ section#skills::after {
   background: url(../../dist/images/skills.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
-  opacity: 0.6;
+  opacity: 0.5;
   top: 0;
   right: 0;
   width: 100%;
@@ -680,15 +709,26 @@ section#skills::after {
 }
 
 section#projects {
-  background-color: #d2d2d2;
   height: 100%;
+}
+
+section#projects::after {
+  background: url(../../dist/images/projects.jpg) no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 section#contact::after {
   background: url(../../dist/images/contact.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
-  opacity: 0.6;
+  opacity: 0.5;
   top: 0;
   right: 0;
   width: 100%;
