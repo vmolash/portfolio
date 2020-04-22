@@ -51,7 +51,7 @@ ul {
 %h {
     color: $text-color;
     font-family: $font-headings;
-    padding-top: 9rem;
+    padding-top: 6rem;
     margin-left: nth($pd, 3)+5;
     font-weight: 400;
 }
@@ -91,11 +91,24 @@ body {
   line-height: 1.6;
   overflow: hidden;
 }
-body p, body li, body a {
-    font-size: 1.8rem;
+body p, body li, body a, span {
+    font-size: 2.2rem;
+}
+#contact p {
+    font-size: 3.8rem;
 }
 i {
-    background-color: white;
+    margin-right: 15px;
+}
+.cont {
+    li {
+        margin-bottom: 1.5rem;
+        a {
+            display: flex;
+            align-items: flex-end;
+            justify-items: flex-start;
+        }
+    }
 }
 body a {
     color: #dedede;
@@ -124,6 +137,18 @@ body a {
     // font-style: normal;
     // font-size: 11.5px;
     letter-spacing: .14em;
+  }
+.active { // header active link
+      color:  rgb(147, 210, 147);
+      transition: all 0.5s ease-in-out;
+  }
+  .name {
+      color: #444;
+      font-size: 8.0rem;
+  }
+  .fact {
+      color: #444;
+      font-size: 5rem;
   }
   .proj {
     display: grid;

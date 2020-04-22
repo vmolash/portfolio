@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Volha Molash | Front-End Developer</title>
-    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -17,12 +18,12 @@
             <div class="container">
                 <input type="checkbox" id="toggle">
                 <label for="toggle">Menu</label>
-                <nav class="nav">
+                <nav id="nav">
                     <ul>
-                        <li><a href="#home" class="logo">VM</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="logo nav-item active">VM</a></li>
+                        <li><a href="#skills" class="nav-item">Skills</a></li>
+                        <li><a href="#projects" class="nav-item">Projects</a></li>
+                        <li><a href="#contact" class="nav-item">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -31,8 +32,8 @@
             
                 <section id="home">
                     <div class="container">
-                            <h1>Volha Molash</h1>
-                            <h2>Fron-end web developer with passion for coding</h2>
+                            <h1>Volha <span class="name">Molash</span></h1>
+                            <h2><span class="fact">Fron-end web Developer</span> with passion for coding</h2>
                     </div>    
                 </section>
             
@@ -97,12 +98,17 @@
             
                     <section id="contact">
                             <h2>Let's create something great!</h2>
-                            <p>Connect with me today:</p>
+                            <p class="connect">Connect with me today:</p>
             
                             <ul class="cont">
-                                <li><a href="mailto:molash.v@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-                                <li><a href="https://github.com/vmolash" target="_blank">GitHub</a></li>
-                                <li><a href="https://www.linkedin.com/in/volha-molash-024328b1/" target="_blank">LinkedIn</a></li>
+                                <li>
+                                    <a href="mailto:molash.v@gmail.com">
+                                        <i class="fas fa-envelope fa-2x"></i>
+                                        <span>Email</span>
+                                    </a>
+                                </li>
+                                <li><a href="https://github.com/vmolash" target="_blank"><i class="fab fa-github fa-2x"></i><span>GitHub</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/volha-molash-024328b1/" target="_blank"><i class="fab fa-linkedin fa-2x"></i><span>LinkedIn</span></a></li>
                             </ul>
                     </section>
             

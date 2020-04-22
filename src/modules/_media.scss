@@ -3,8 +3,8 @@ $home-image: url(../../dist/images/coding_home.jpg) no-repeat
 center center/cover;
 $skills-image: url(../../dist/images/skills.jpg) no-repeat
 center center/cover;
-// $projects-image: url(../../dist/images/projects.jpg) no-repeat
-//   center center/cover;
+$projects-image: url(../../dist/images/projects.jpg) no-repeat
+  center center/cover;
 $contact-image: url(../../dist/images/contact.jpg) no-repeat
 center center/cover;
 img {
@@ -50,52 +50,25 @@ section {
 
   section#home::after {
     background: $home-image;
-    content: " ";
-    position: absolute;
-    opacity: 0.6;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    @include sectionImage;
 }
   
   section#skills::after {
     background: $skills-image;
-      content: "";
-      position: absolute;
-      opacity: 0.6;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    @include sectionImage;
   }
   section#projects {
-    // background: $projects-image;
-    //   content: "";
-    // position: absolute;
-    // opacity: 0.6;
-    // top: 0;
-    // right: 0;
-    // width: 100%;
-    // height: 100%;
-    // z-index: -1;
-    background-color: #d2d2d2;
     height: 100%;
-
+  }
+  section#projects::after {
+    background: $projects-image;
+    @include sectionImage;
+    // background-color: #d2d2d2;
   }
   
   section#contact::after {
     background: $contact-image;
-      content: "";
-      position: absolute;
-      opacity: 0.6;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    @include sectionImage;
   }
 // .pr-fly {
 //     background: url(../../dist/images/flyranch.jpg) no-repeat center center;

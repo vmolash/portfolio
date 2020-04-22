@@ -8,7 +8,7 @@ $nav-color:         #fff;
 $list-hover:        lightyellow;
 $yellow:            rgb(147, 210, 147);
 $lightblue:         lightskyblue;
-$red:               darkred;
+$red:               rgb(42, 138, 42);
 $green:             darkgreen;
 $lightgreen:        lightseagreen;
 $lightpink:         lightpink;
@@ -28,7 +28,7 @@ $font-body: Verdana, sans-serif;
 $font-headings: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $size-text: 1.4rem;
 $size-headings: ( // map. (It used at _media.scss, line#13)
-    h1: 6.0rem,
+    h1: 8.0rem,
     h2: 4.8rem,
     h3: 1.8rem
 );

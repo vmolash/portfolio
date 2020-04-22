@@ -79,10 +79,11 @@ header {
     border-bottom: 1px solid #e3e3e3;
 }
 .logo {
-    transition: all 0.3s ease-in-out;
+    // transition: all 0.3s ease-in-out;
+    width: 200px;
 }
 .logo:hover {
     z-index: 2;
-    font-size: 140%;
+    font-size: 120%;
     
 }
