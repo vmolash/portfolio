@@ -4,9 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
+    font-family: $font-body;
 }
 .container {
-    font-family: $font-body;
     margin: 0 auto;
     max-width: 960px;
     line-height: 1.55;
@@ -36,17 +36,19 @@ ul {
     
     }
     &.tech {
+        color: #444;
         display: grid;
         grid-template-columns: 1fr;
         @include break(501px) {
+            grid-gap: .3rem 4rem;
             grid-template-columns: repeat(2, 1fr);
         }
        margin: 0;
         li {
         text-align: left;
         // border-radius: nth($roundness, 1);
-        padding: nth($pd, 2);
-        margin-right: nth($pd, 5)+30px;
+        padding: 0 nth($pd, 2);
+        // margin: nth($pd, 5);
         list-style-type: square;
         transition: all .2s ease-in-out;
         // section &::before {
@@ -167,6 +169,10 @@ header a {
 }
 .light {
     color: rgb(61, 142, 61);
+    padding-left: 2rem;
+    // h2.light:nth-of-type(2) {
+    //     padding-top: 
+    // }
 }
 .home {
     @include break(630px) { color: #444; }
