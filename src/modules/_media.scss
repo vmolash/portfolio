@@ -10,7 +10,6 @@ center center/cover;
 img {
     max-width: 100%;
     height: auto;
-    
     border-radius: nth($pd, 2);
     
 }
@@ -35,7 +34,7 @@ section#home, section#skills, section#projects, section#contact {
     
 //   }
 section {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -56,9 +55,21 @@ section {
   section#skills::after {
     background: $skills-image;
     @include sectionImage;
+    opacity: 0.2;
+  }
+  section#skills {
+    height: 100%;
+    h2 { padding-top: 8rem;}
+    @include break(501px) {height: 100vh;}
   }
   section#projects {
     height: 100%;
+    .heading { padding-top: 8rem; }
+  }
+  section#contact {
+    height: 100%;
+    .heading { padding-top: 8rem; }
+    @include break(501px) { height: 100vh;}
   }
   section#projects::after {
     background: $projects-image;
@@ -70,6 +81,8 @@ section {
     background: $contact-image;
     @include sectionImage;
   }
+
+
 // .pr-fly {
 //     background: url(../../dist/images/flyranch.jpg) no-repeat center center;
 //     width: 320px;
@@ -86,17 +99,17 @@ section {
 
 
 
-figure { // nested 2 level
-    margin: 15px 0;
-    text-align: center;
-    &.art { margin-top: 0; }
-    figcaption {
-        padding: 0 15px;
-        font-size: map-get($size-headings , h3) - 0.6; // built-in function: map-get
-        color: $figcapt;
-        @include break (650px) { text-align: right; }  //using mixin break
-    }
-}
+// figure { // nested 2 level
+//     margin: 15px 0;
+//     text-align: center;
+//     &.art { margin-top: 0; }
+//     figcaption {
+//         padding: 0 15px;
+//         font-size: map-get($size-headings , h3) - 0.6; // built-in function: map-get
+//         color: $figcapt;
+//         @include break (650px) { text-align: right; }  //using mixin break
+//     }
+// }
 // .float { // nested 3 level
 //     margin-bottom: nth($pd, 4);
 //     @include clearfix; // using mixin clearFix
@@ -112,34 +125,34 @@ figure { // nested 2 level
 //         }
 //     }
 // }
-#wrapper {
-    display: grid;
-    grid-gap: nth($pd, 1);
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: nth($pd, 1)+70;
-    grid-auto-flow: dense;
-    margin-bottom: nth($pd, 2); // from the list $pd we took the second element which is equal 10px
-    img {
-        @include heightWidth;
-        object-fit: cover;
-    }
-    .horiz, .big { grid-column: $gridColRow; } // list $gridColRow
-    .vert, .big { grid-row: $gridColRow; }
-    .special { @include break(542px, 649px) { grid-column: $gridColRow; } }
-}
-@each $image in $imageColor {
-    .#{$image}:hover {
-        img {
-            border: solid 3px;
-            @if $image == "horiz" { // if/else
-            border-color: $lightpink;
-            } @else if $image == "vert" {
-            border-color: $lightgreen;
-            } @else if $image == "big"{
-            border-color: $yellow;
-            } @else {
-            border-color: $lightblue;
-            }
-        } 
-    }	
-}
+// #wrapper {
+//     display: grid;
+//     grid-gap: nth($pd, 1);
+//     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//     grid-auto-rows: nth($pd, 1)+70;
+//     grid-auto-flow: dense;
+//     margin-bottom: nth($pd, 2); // from the list $pd we took the second element which is equal 10px
+//     img {
+//         @include heightWidth;
+//         object-fit: cover;
+//     }
+//     .horiz, .big { grid-column: $gridColRow; } // list $gridColRow
+//     .vert, .big { grid-row: $gridColRow; }
+//     .special { @include break(542px, 649px) { grid-column: $gridColRow; } }
+// }
+// @each $image in $imageColor {
+//     .#{$image}:hover {
+//         img {
+//             border: solid 3px;
+//             @if $image == "horiz" { // if/else
+//             border-color: $lightpink;
+//             } @else if $image == "vert" {
+//             border-color: $lightgreen;
+//             } @else if $image == "big"{
+//             border-color: $yellow;
+//             } @else {
+//             border-color: $lightblue;
+//             }
+//         } 
+//     }	
+// }

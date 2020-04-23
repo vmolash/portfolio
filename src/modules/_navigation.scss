@@ -5,10 +5,10 @@ header {
         position: absolute;
         top: -999em;
         left: -999em;
-        &:checked ~ nav {
-            height: auto;
-            overflow: hidden;
-        }
+        // &:checked ~ nav {
+        //     height: auto;
+        //     overflow: hidden;
+        // }
     }
     label {
         display: block;
@@ -35,11 +35,11 @@ header {
             li {
                 border-radius: 5px;
                 @include linx($nav-color, $heading-color, $red);
-                &:hover {
+                // &:hover {
                     
-                    // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
-                    &:first-of-type { background-color: transparent; }
-                }
+                //     // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
+                //     // &:first-of-type { background-color: transparent; }
+                // }
                 a { 
                     font-weight: bold;
                     display: block;
@@ -66,8 +66,6 @@ header {
     }
 } 
 
-
-
 // portfolio
 header {
     position: fixed;
@@ -79,11 +77,16 @@ header {
     border-bottom: 1px solid #e3e3e3;
 }
 .logo {
-    // transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 200px;
 }
 .logo:hover {
     z-index: 2;
-    font-size: 120%;
+    // font-size: 120%;
+    transform: scale(1.2);
     
+}
+.show {
+    height: 100%;
+    overflow: hidden;
 }
