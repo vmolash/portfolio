@@ -381,10 +381,23 @@ ul li {
 }
 
 ul.tech {
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  opacity: .7;
   color: #444;
+  cursor: pointer;
   display: grid;
+  border: solid 1px #e1a87a;
   grid-template-columns: 1fr;
+  padding: 2rem;
+  transition: background-color .5s ease;
   margin: 0;
+}
+
+ul.tech:hover {
+  background-color: #444;
+  border: solid 1px #444;
+  color: #f5f5f5;
 }
 
 @media (min-width: 501px) {
@@ -397,7 +410,6 @@ ul.tech {
 ul.tech li {
   text-align: left;
   padding: 0 10px;
-  list-style-type: square;
   transition: all .2s ease-in-out;
 }
 
@@ -454,6 +466,17 @@ i {
 
 #home .cont li a {
   justify-items: center;
+  align-items: baseline;
+}
+
+@media (min-width: 630px) {
+  #home .cont li a {
+    margin-right: 2rem;
+  }
+}
+
+#home .cont li a:hover {
+  color: #faa966;
 }
 
 .cont li {
@@ -473,6 +496,7 @@ i {
 
 body a {
   color: #dedede;
+  transition: all .3s ease-out;
 }
 
 body a:hover, body a:active {
@@ -510,8 +534,8 @@ header a {
 }
 
 .light {
-  color: #3d8e3d;
-  padding-left: 2rem;
+  color: #9dae8f;
+  padding-left: 4rem;
 }
 
 @media (min-width: 630px) {
@@ -524,6 +548,10 @@ header a {
   display: grid;
   grid-gap: 1.8rem;
   margin: 3rem 0;
+}
+
+.proj p {
+  text-align: center;
 }
 
 @media (min-width: 501px) {
@@ -546,6 +574,9 @@ header a {
   h2, .fact {
     font-size: 4rem;
     text-align: left;
+  }
+  h2 {
+    font-size: 3rem;
   }
   .heading {
     padding-top: 7rem;
@@ -671,13 +702,13 @@ header .show {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .proj div {
   background-color: #444;
-  border: solid 3px #444;
-  border-radius: 10px;
+  border: solid 2px #444;
+  border-radius: 5px;
   transition: all 0.5s ease-out;
 }
 
@@ -758,6 +789,16 @@ section#projects {
 
 section#projects .heading {
   padding-top: 8rem;
+}
+
+@media (min-width: 501px) {
+  section#projects {
+    align-items: center;
+  }
+  section#projects .heading.light {
+    align-self: flex-start;
+    padding-left: 4rem;
+  }
 }
 
 section#contact {
