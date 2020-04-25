@@ -535,6 +535,9 @@ header a {
 
 .light {
   color: #9dae8f;
+}
+
+section#skills .light {
   padding-left: 4rem;
 }
 
@@ -581,6 +584,25 @@ header a {
   .heading {
     padding-top: 7rem;
   }
+}
+
+.pr {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-reveal {
+  padding: 20px;
+  position: absolute;
+  overflow-y: auto;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  transition: all .5s ease;
+}
+
+.activeCard {
+  transform: translateY(-100%);
 }
 
 header input[type=checkbox] {
@@ -702,19 +724,60 @@ header .show {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: .2rem;
 }
 
 .proj div {
   background-color: #444;
   border: solid 2px #444;
-  border-radius: 5px;
+  border-radius: .2rem;
   transition: all 0.5s ease-out;
 }
 
 .proj div:hover {
-  border-color: #93d293;
-  opacity: 0.7;
+  border-color: #e1a87a;
+}
+
+.proj div.card-reveal {
+  display: flex;
+  flex-direction: column;
+  color: #f5f5f5;
+}
+
+.proj div.card-reveal h4 {
+  color: #faa966;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: .7rem;
+  margin-left: 1.3rem;
+}
+
+.proj div.card-reveal h4 i {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 1.4rem;
+  margin-right: 0;
+}
+
+.proj div.card-reveal a {
+  display: flex;
+  margin-top: auto;
+}
+
+.proj div.card-reveal a h4 {
+  color: #93d293;
+  transition: all .5s ease-in;
+}
+
+.proj div.card-reveal a h4:hover {
+  transform: scale(0.9);
+}
+
+.proj div.card-reveal li {
+  list-style-type: inherit;
+  margin-bottom: .7rem;
 }
 
 /* Section Images */
@@ -797,12 +860,25 @@ section#projects .heading {
   }
   section#projects .heading.light {
     align-self: flex-start;
-    padding-left: 4rem;
+    padding-left: 3rem;
   }
 }
 
 section#contact {
   height: 100%;
+}
+
+section#contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 501px) {
+  section#contact .container {
+    align-items: flex-end;
+  }
 }
 
 section#contact .heading {
