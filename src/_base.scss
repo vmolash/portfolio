@@ -155,8 +155,9 @@ header a {
 }
 .light {
     color: $light-heding;
-    padding-left: 4rem;
+    
 }
+section#skills .light { padding-left: 4rem; }
 .home {
     @include break(630px) { color: #444; }
 }
@@ -181,5 +182,24 @@ header a {
     .heading {
         padding-top: 7rem;
     }
+}
+
+// Projects animation
+.pr {
+    position: relative;
+    overflow: hidden;
+}
+.card-reveal {
+    padding: 20px;
+    position: absolute;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    // z-index: 1;
+    transition: all .5s ease;
+}
+.activeCard {
+    transform: translateY(-100%);
 }
   
