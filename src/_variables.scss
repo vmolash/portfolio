@@ -10,17 +10,13 @@ $yellow:            rgb(147, 210, 147);
 $red:               rgb(42, 138, 42);
 $hover-icon-home:   #faa966;
 $light-heding:      #9dae8f;
+$dark-green:        #445436;
+$text-card:         #f5f5f5;
 
 $pd: 5px 10px 12px 15px 20px; // list property (It used at _media.scss, line #39)
 $roundness: 10px 0 20px 0; // list property. (It used at _media.scss, line #27)
 $gridColRow: span 2; // list property. (It used at _media.scss, line #44)
-$imageColor: "horiz" "vert" "big" "small"; // list. Used at _media.scss
 
 $font-body: Verdana, sans-serif;
 $font-headings: Verdana, sans-serif;
 $size-text: 1.4rem;
-// $size-headings: ( // map. (It used at _media.scss, line#13)
-//     h1: 8.0rem,
-//     h2: 4.8rem,
-//     h3: 1.8rem
-// );

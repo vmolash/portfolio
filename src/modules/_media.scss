@@ -1,4 +1,4 @@
-// images, video
+// images
 $home-image: url(../../dist/images/coding_home.jpg) no-repeat
 center center/cover;
 $skills-image: url(../../dist/images/skills.jpg) no-repeat
@@ -13,17 +13,15 @@ img {
     border-radius: .2rem;
 }
 .proj div {
-    background-color: #444;
-    border: solid 2px #444;
+    background-color: $nav-background;
+    border: solid 2px $nav-background;
     border-radius: .2rem; 
     transition: all 0.5s ease-out;
-    &:hover {
-        border-color: #e1a87a;
-    }
+    &:hover { border-color: $hover-icon-home; }
     &.card-reveal { 
       display: flex;
       flex-direction: column;
-      color: #f5f5f5;
+      color: $text-card;
       h4 { 
         color: $hover-icon-home;
         cursor: pointer;
@@ -33,9 +31,9 @@ img {
         margin-bottom: .7rem;
         margin-left: 1.3rem;
         i {
-          font-size: 1.6rem;
-          font-weight: 700;
-          margin-left: 1.4rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-left: 1rem;
           margin-right: 0;
         }
        }
@@ -47,22 +45,12 @@ img {
           transition: all .5s ease-in;
           &:hover { transform: scale(0.9); }
         }
-      } 
-      li { 
-        list-style-type: inherit;
-        margin-bottom: .7rem;
       }
     }
 }
-
-// PORTFOLIO
-/* Section Images */
 section#home, section#skills, section#projects, section#contact {
     position: relative;
 }
-// section#home {
-    
-//   }
 section {
   display: flex;
   flex-direction: column;
@@ -72,56 +60,51 @@ section {
   height: 100vh;
   padding: 2rem 4rem;
   @include break(501px) { align-items: flex-start; }
-  /* Scroll Snap */
-//   scroll-snap-align: center;
 }
-
-  section#home::after {
-    background: $home-image;
-    @include sectionImage;
+section#home::after {
+  background: $home-image;
+  // @include bread(630px) { background: $home-imageLarge; }
+  @include sectionImage;
+} 
+section#skills::after {
+  background: $skills-image;
+  @include sectionImage;
+  opacity: 0.2;
 }
-  
-  section#skills::after {
-    background: $skills-image;
-    @include sectionImage;
-    opacity: 0.2;
-  }
-  section#skills {
-    height: 100%;
-    h2 { padding-top: 8rem;}
-    h2.second { padding-top: 3rem; }
-    @include break(501px) {height: 100vh; align-items: center;}
-  }
-  section#projects {
-    height: 100%;
-    .heading { padding-top: 8rem; }
-    @include break(501px) {
-      align-items: center;
-      .heading.light { 
-        align-self: flex-start;
-        padding-left: 3rem;
-      }
+section#skills {
+  height: 100%;
+  h2 { padding-top: 8rem;}
+  h2.second { padding-top: 3rem; }
+  @include break(501px) {height: 100vh; align-items: center;}
+}
+section#projects {
+  height: 100%;
+  .heading { padding-top: 8rem; }
+  @include break(501px) {
+    align-items: center;
+    .heading.light { 
+      align-self: flex-start;
+      padding-left: 3rem;
     }
   }
-  section#contact {
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      @include break(501px) { align-items: flex-end; }
-    }
-    height: 100%;
-    .heading { padding-top: 8rem; }
-    @include break(501px) { height: 100vh; align-items: flex-end; }
+}
+section#contact {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include break(501px) { align-items: flex-end; }
   }
-  section#projects::after {
-    background: $projects-image;
-    @include sectionImage;
-    // background-color: #d2d2d2;
-  }
-  
-  section#contact::after {
-    background: $contact-image;
-    @include sectionImage;
-  }
+  height: 100%;
+  .heading { padding-top: 8rem; }
+  @include break(501px) { height: 100vh; align-items: flex-end; }
+}
+section#projects::after {
+  background: $projects-image;
+  @include sectionImage;
+}
+section#contact::after {
+  background: $contact-image;
+  @include sectionImage;
+}

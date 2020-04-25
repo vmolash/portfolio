@@ -30,17 +30,6 @@
         clear: both;
     }
   }
-  // @mixin imageFloat($qty, $margin) {
-  //   width: ((100% - (($qty - 1) * $margin)) / $qty);
-  //   &:nth-child(n) {
-  //       margin-bottom: $margin;
-  //       margin-right: $margin;
-  //   }
-  //   &:nth-child(#{$qty}n) {
-  //       margin-bottom: 0;
-  //       margin-right: 0;
-  //   }
-  // }
   @mixin browsers {
     -webkit-user-select: none; /*Chrome all / Safari all */
     -moz-user-select: none; /*Firefox all */
@@ -50,8 +39,6 @@
     width: 100%;
     height: 100%;
   }
-  
-
   @mixin sectionImage {
     content: "";
       position: absolute;
@@ -61,4 +48,8 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+  }
+  @keyframes scaleLogo {
+    0% { transform: scale(.7); }
+    100% { transform: scale(1.1); }
   }

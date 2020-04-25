@@ -1,4 +1,4 @@
-// active link sets to green color when click on it
+// Active link sets to green color when click on it
 const NAVCONTAINER = document.querySelector('nav');
 const NAVITEMS = NAVCONTAINER.getElementsByClassName('nav-item');
 
@@ -10,11 +10,9 @@ for(let i = 0; i < NAVITEMS.length; i++) {
   });
 }
 
-// paragraph on the Coctact section changes text color to green with delay
+// Paragraph on the Coctact section changes text color to green with delay
 const CLICKEDCONTACTLINK = document.querySelector('[href="#contact"]');
-
-let PARCONTACT = document.getElementsByClassName('connect');
-
+const PARCONTACT = document.getElementsByClassName('connect');
 
 CLICKEDCONTACTLINK.addEventListener('click', function() {
   setTimeout(changeColor, 2000);
@@ -23,10 +21,10 @@ function changeColor() {
   PARCONTACT[0].classList.add('active');
 }
 
-// logo VM changes to Volha Molash when hover over on it
+// Logo VM changes to Volha Molash when hover over on it
 const LOGONAME = document.querySelector('.logo');
 
-LOGONAME.addEventListener('mouseover', function() {
+LOGONAME.addEventListener('mouseenter', function() {
   this.innerHTML = 'Volha Molash';
   let stringName = this.textContent.split(' '); // convert to array
   console.log(stringName);
@@ -49,11 +47,9 @@ const LAB = document.querySelector('label');
 if(window.screen.width < 500) {
   LAB.addEventListener('click', function() {
     NAVIGAT.classList.toggle('show');
-    
   });
   NAVIGAT.addEventListener('click', function() {
     this.classList.toggle('show');
-    
   });
 }
 
@@ -62,23 +58,6 @@ const HOME = document.querySelector('.home');
 if(window.screen.width > 630) {
   HOME.parentNode.removeChild(HOME);
 }
-
-// projects Show Description div on click
-// const PROJECT = document.querySelector('.face');
-// console.log(PROJECT);
-// const DESCRIPTION = document.querySelector('.description');
-// console.log(DESCRIPTION);
-// PROJECT.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   if( (e.target.parentNode.parentNode.classList).contains('face')) {
-//     console.log('Congrants');
-//     console.log(e.target.parentNode.parentNode);
-//     DESCRIPTION.classList.toggle('showDescription');
-//   }
-// });
-// DESCRIPTION.addEventListener('click', function(e) {
-//   this.classList.toggle('showDescription');
-// });
 
 // PROJECT card animation 
 const CARDCONTENT = document.getElementsByClassName('card-content'); // all div.card-content
@@ -103,7 +82,4 @@ for(let i = 0; i < CARDREVEAL.length; i++) {
 function hideRevealCard(e) {
     this.parentNode.classList.remove('activeCard');
 }
-
-
-
 

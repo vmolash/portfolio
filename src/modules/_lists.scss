@@ -1,0 +1,65 @@
+ul {
+    margin: nth($pd, 1) nth($pd, 3);
+    li {
+     @extend %fz;
+     list-style-type: none;
+     margin: nth($pd, 1);
+     }
+     &.tech { // section Skills
+         background-color: white;
+         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+         opacity: .7;
+         color: $nav-background;
+         cursor: pointer;
+         display: grid;
+         border: solid 1px #e1a87a;;
+         grid-template-columns: 1fr;
+         padding: 2rem;
+         transition: background-color .5s ease;
+         &:hover { 
+             background-color: $nav-background;
+             border: solid 1px $nav-background;;
+             color: #f5f5f5;
+          }
+         @include break(501px) {
+             grid-gap: .3rem 4rem;
+             grid-template-columns: repeat(2, 1fr);
+         }
+         margin: 0;
+         li {
+         text-align: left;
+         padding: 0 nth($pd, 2);
+         transition: all .2s ease-in-out; // animation
+         &:hover { background-color: #666; color: #dedede }
+         }
+    }
+ }
+ // section Contact
+ .cont { // social icons
+    #home & {
+        @include break(501px) { display: flex; } 
+        li { 
+            margin-right: 2rem;
+            a {
+                justify-items: center;
+                align-items: baseline;
+                @include break(630px) { margin-right: 2rem; }
+                &:hover { color: $hover-icon-home; }
+            }
+         }
+    }
+    li {
+        margin-bottom: 1.5rem;
+        a {
+            display: flex;
+            align-items: flex-end;
+            justify-items: flex-start;
+            transition: all 0.6s ease-in-out;
+            &:hover { transform: scale(.85); }
+        }
+    }
+}
+.card-reveal li {
+    list-style-type: inherit;
+    margin-bottom: .7rem;
+}

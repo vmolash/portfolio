@@ -1,0 +1,26 @@
+// Projects animation
+.logo {
+    transition: all 0.3s ease-in-out;
+    &:hover { animation: scaleLogo 3s infinite;  }
+}
+.pr {
+    position: relative;
+    overflow: hidden;
+}
+.card-reveal { // with js
+    padding: 2rem;
+    position: absolute;
+    overflow-y: auto;
+    top: 100%;
+    @include heightWidth;
+    transition: all .5s ease;
+}
+.show { // with js
+    height: 100%;
+    overflow: hidden;
+}
+.activeCard { transform: translateY(-100%); } // with js
+.active { // header active link with js
+    color:  $heading-color;
+    transition: all 0.5s ease-in-out;
+}

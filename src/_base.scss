@@ -6,129 +6,24 @@
     font-size: 10px;
     font-family: $font-body;
 }
-.container {
-    margin: 0 auto;
-    max-width: 960px;
-    line-height: 1.55;
-    %fz { font-size: $size-text; }
-    // @include break(800px) { box-shadow: 0px 3px 8px 3px $shadow; }
-}
-%bar{ background-color: $nav-background; }
-footer {
-    @extend %bar;
-    text-align: center;
-}
-p {
-    @extend %fz;
-    color: $text-color;
-    padding-bottom: nth($pd, 3);  // nth($list, $n) function which takes 3rd element (12px) from list $pd.
-    footer & {
-        color: $nav-color;
-        padding: nth($pd, 2);
-    }
-}
-ul {
-   margin: nth($pd, 1) nth($pd, 3);
-   li {
-    @extend %fz;
-    list-style-type: none;
-    margin: nth($pd, 1);
-    
-    }
-    &.tech {
-        background-color: white;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-        opacity: .7;
-        color: #444;
-        cursor: pointer;
-        display: grid;
-        border: solid 1px #e1a87a;;
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        transition: background-color .5s ease;
-        &:hover { 
-            background-color: #444;
-            border: solid 1px #444;;
-            color: #f5f5f5;
-         }
-        @include break(501px) {
-            grid-gap: .3rem 4rem;
-            grid-template-columns: repeat(2, 1fr);
-        }
-       margin: 0;
-        li {
-        text-align: left;
-        // border-radius: nth($roundness, 1);
-        padding: 0 nth($pd, 2);
-        transition: all .2s ease-in-out;
-        &:hover { background-color: #666; color: #dedede }
-        }
-   }
-}
-%h {
-    color: $text-color;
-    font-family: $font-headings;
-    // padding-top: 6rem;
-    // margin-left: nth($pd, 3)+5;
-    font-weight: 400;
-}
-h1, .name {
-    font-size: 4rem;
-    @extend %h;
-}
-h2, .fact {
-    font-size: 3rem;
-    @extend %h;
-}
-a {
-    @extend %fz;
-    text-decoration: none;
-}
-// PORTFOLIO
 body {
     height: 100vh;
     line-height: 1.6;
     overflow: hidden;
     p, li, a, span { font-size: 2.2rem; }
-}
-#contact p { font-size: 3.8rem; }
-i { margin-right: 15px; }
-.cont {
-    #home & {
-        @include break(501px) { display: flex; } 
-        li { 
-            margin-right: 2rem;
-            a {
-                justify-items: center;
-                align-items: baseline;
-                @include break(630px) { margin-right: 2rem; }
-                &:hover { color: $hover-icon-home; }
-            }
-         }
-    }
-    li {
-        margin-bottom: 1.5rem;
-        a {
-            display: flex;
-            align-items: flex-end;
-            justify-items: flex-start;
-            transition: all 0.6s ease-in-out;
-            &:hover {
-                transform: scale(.85);
-
-            }
-        }
+    a {
+        @extend %fz;
+        color: #dedede;
+        text-decoration: none;
+        transition: all .3s ease-out;
+        &:hover, &:active {  color: $heading-color; }
     }
 }
-body a {
-    color: #dedede;
-    transition: all .3s ease-out;
-    &:hover, &:active {
-        color:  rgb(147, 210, 147);
-    }
+footer a {
+    color: #fff;
+    &:hover { color: $heading-color; }
 }
-
-// END PORTFOLIO
+header a { letter-spacing: .14em; }
 .wrapper {
     width: 100%;
     height: 100%;
@@ -137,30 +32,67 @@ body a {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-footer a {
-    color: #fff;
-    &:hover {
-        color:  rgb(147, 210, 147);
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    line-height: 1.55;
+    %fz { font-size: $size-text; }
+}
+%bar{ background-color: $nav-background; }
+footer {
+    @extend %bar;
+    text-align: center;
+    opacity: .95;
+}
+p {
+    @extend %fz;
+    color: $text-color;
+    padding-bottom: nth($pd, 3);
+    footer & {
+        color: $nav-color;
+        padding: nth($pd, 2);
     }
 }
-header a {
-    letter-spacing: .14em;
+%h {
+    color: $text-color;
+    font-family: $font-headings;
+    font-weight: 400;
 }
-.active { // header active link
-      color:  rgb(147, 210, 147);
-      transition: all 0.5s ease-in-out;
-  }
-.name, .fact {
-      color: #444;
+h1, .name {
+    font-size: 4rem;
+    opacity: .9;
+    @extend %h;
+    @include break(501px) {
+        font-size: 8.5rem;
+        text-align: left;
+    }
 }
-.light {
-    color: $light-heding;
-    
+h2, .fact {
+    font-size: 3rem;
+    opacity: .9;
+    @extend %h;
+    @include break(501px) {
+        font-size: 4rem;
+        text-align: left;
+    }
 }
+h2 { @include break(501px) { h2 { font-size: 3rem; } } }
+.heading { @include break(501px) { .heading { padding-top: 7rem; } } }
+#contact p:first-of-type { 
+    font-size: 3.8rem;
+    margin-top: 4rem;
+    @include break(501px) { margin-top: 0;}
+}
+#contact p:nth-of-type(2) { font-size: 3.4rem; }
+i { margin-right: 15px; }
+.name, .fact { color: $nav-background; }
+section#projects .light {
+    color: $dark-green;
+    @include break(501px) { color: $light-heding; }
+}
+.light { color: $light-heding; }
 section#skills .light { padding-left: 4rem; }
-.home {
-    @include break(630px) { color: #444; }
-}
+.home { @include break(630px) { color: #444; } }
 .proj {
     display: grid;
     grid-gap: 1.8rem;
@@ -168,38 +100,5 @@ section#skills .light { padding-left: 4rem; }
     p { text-align: center; }
     @include break(501px) { grid-template-columns: repeat(2, 1fr); }
     @include break(769px) { grid-template-columns: repeat(3, 1fr); }
-}
-@media screen and (min-width: 501px) {
-    h1, .name {
-        font-size: 8.5rem;
-        text-align: left;
-    }
-    h2, .fact {
-        font-size: 4rem;
-        text-align: left;
-    }
-    h2 { font-size: 3rem; }
-    .heading {
-        padding-top: 7rem;
-    }
-}
-
-// Projects animation
-.pr {
-    position: relative;
-    overflow: hidden;
-}
-.card-reveal {
-    padding: 20px;
-    position: absolute;
-    overflow-y: auto;
-    top: 100%;
-    height: 100%;
-    width: 100%;
-    // z-index: 1;
-    transition: all .5s ease;
-}
-.activeCard {
-    transform: translateY(-100%);
 }
   

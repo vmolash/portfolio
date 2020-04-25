@@ -1,5 +1,14 @@
 // top bar menu
 header {
+    background: #444;
+    border-bottom: 1px solid #e3e3e3;
+    opacity: .85;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    .logo { width: 200px; }
     @extend %bar; // extend shallow class bar
     input[type=checkbox] {
         position: absolute;
@@ -31,11 +40,6 @@ header {
             li {
                 border-radius: 5px;
                 @include linx($nav-color, $heading-color, $red);
-                // &:hover {
-                    
-                //     // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
-                //     // &:first-of-type { background-color: transparent; }
-                // }
                 a { 
                     font-weight: bold;
                     display: block;
@@ -59,28 +63,5 @@ header {
                 }
             }
         }
-    }
-} 
-
-// portfolio
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #444;
-    z-index: 1000;
-    border-bottom: 1px solid #e3e3e3;
-    .logo {
-        transition: all 0.3s ease-in-out;
-        width: 200px;
-        &:hover {
-            z-index: 2;
-            transform: scale(1.2);
-        }
-    }
-    .show {
-        height: 100%;
-        overflow: hidden;
     }
 }
