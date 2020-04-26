@@ -1,12 +1,24 @@
 // images
-$home-image: url(../../dist/images/coding_home.jpg) no-repeat
+$home-imageD: url(../../dist/images/homeD.jpg) no-repeat
 center center/cover;
-$skills-image: url(../../dist/images/skills.jpg) no-repeat
+$home-imageM: url(../../dist/images/homeM.jpg) no-repeat
 center center/cover;
-$projects-image: url(../../dist/images/projects.jpg) no-repeat
-  center center/cover;
-$contact-image: url(../../dist/images/contact.jpg) no-repeat
+
+$skills-imageD: url(../../dist/images/skillsD.jpg) no-repeat
 center center/cover;
+$skills-imageM: url(../../dist/images/skillsM.jpg) no-repeat
+center center/cover;
+
+$projects-imageD: url(../../dist/images/projectsD.jpg) no-repeat
+center center/cover;
+$projects-imageM: url(../../dist/images/projectsM.jpg) no-repeat
+center center/cover;
+
+$contact-imageD: url(../../dist/images/contactD.jpg) no-repeat
+center center/cover;
+$contact-imageM: url(../../dist/images/contactM.jpg) no-repeat
+center center/cover;
+
 img {
     max-width: 100%;
     height: auto;
@@ -62,12 +74,13 @@ section {
   @include break(501px) { align-items: flex-start; }
 }
 section#home::after {
-  background: $home-image;
-  // @include bread(630px) { background: $home-imageLarge; }
+  background: $home-imageM;
+  @include break(630px) { background: $home-imageD; }
   @include sectionImage;
 } 
 section#skills::after {
-  background: $skills-image;
+  background: $skills-imageM;
+  @include break(630px) { background: $skills-imageD; }
   @include sectionImage;
   opacity: 0.2;
 }
@@ -101,10 +114,12 @@ section#contact {
   @include break(501px) { height: 100vh; align-items: flex-end; }
 }
 section#projects::after {
-  background: $projects-image;
+  background: $projects-imageM;
+  @include break(630px) { background: $projects-imageD; }
   @include sectionImage;
 }
 section#contact::after {
-  background: $contact-image;
+  background: $contact-imageM;
+  @include break(630px) { background: $contact-imageD; }
   @include sectionImage;
 }

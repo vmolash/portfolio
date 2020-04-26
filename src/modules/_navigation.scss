@@ -39,7 +39,7 @@ header {
             @include break(0, 630px) { .logo { display: none; } }
             li {
                 border-radius: 5px;
-                @include linx($nav-color, $heading-color, $red);
+                @include linx($nav-color, $heading-color, $green);
                 a { 
                     font-weight: bold;
                     display: block;
