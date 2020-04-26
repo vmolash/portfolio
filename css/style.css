@@ -334,15 +334,6 @@ template {
   display: none;
 }
 
-@keyframes scaleLogo {
-  0% {
-    transform: scale(0.7);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
 * {
   border: 0;
   margin: 0;
@@ -390,7 +381,6 @@ header a {
   /* CSS Smooth Scroll */
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 .container {
@@ -631,8 +621,8 @@ header nav ul li a {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 56px;
+    width: 10rem;
+    height: 5.6rem;
   }
   header nav ul li a.logo {
     padding: 0;
@@ -851,6 +841,15 @@ section#contact::after {
   }
 }
 
+@keyframes scaleLogo {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .logo {
   transition: all 0.3s ease-in-out;
 }
@@ -874,18 +873,26 @@ section#contact::after {
   transition: all .5s ease;
 }
 
+.activeCard {
+  transform: translateY(-100%);
+}
+
 .show {
   height: 100%;
   overflow: hidden;
 }
 
-.activeCard {
-  transform: translateY(-100%);
-}
-
 .active {
   color: #93d293;
   transition: all 0.5s ease-in-out;
+}
+
+.cont a {
+  transition: all 0.6s ease-in-out;
+}
+
+.cont a:hover {
+  transform: scale(0.85);
 }
 
 ul {
@@ -968,11 +975,6 @@ ul.tech li:hover {
   display: flex;
   align-items: flex-end;
   justify-items: flex-start;
-  transition: all 0.6s ease-in-out;
-}
-
-.cont li a:hover {
-  transform: scale(0.85);
 }
 
 .card-reveal li {
