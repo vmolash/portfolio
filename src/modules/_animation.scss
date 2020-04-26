@@ -5,7 +5,7 @@
   }
 .logo {
     transition: all 0.3s ease-in-out;
-    &:hover { animation: scaleLogo 3s infinite;  }
+    &:hover { animation: scaleLogo 3s forwards;  }
 }
 .pr {
     position: relative;
