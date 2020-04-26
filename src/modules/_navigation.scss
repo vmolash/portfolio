@@ -37,12 +37,12 @@ header {
         ul{
             @include break(0, 630px) { .logo { display: none; } }
             li {
-                border-radius: 5px;
+                border-radius: nth($pd,1);
                 @include linx($text-color, $heading-color, $green);
                 a { 
                     font-weight: bold;
                     display: block;
-                    padding: 12px 10px;
+                    padding: nth($pd,3) nth($pd,3)-2;
                     text-transform: uppercase;
                 }
             } 

@@ -32,3 +32,31 @@
     transition: all 0.6s ease-in-out; // Animation
     &:hover { transform: scale(.85); }
 }
+.disappearArt { opacity: 0;}
+@keyframes showSkills {
+    0% { opacity: 0;}
+    25% { opacity: .25; }
+    50% { opacity: .5; }
+    75% { opacity: .75; }
+    100% { opacity: 1; }
+}
+.appearArt {
+    animation: showSkills 3s 1;
+}
+
+.social-icon {
+    transition: all 2.1s ease;
+    transform: translateX(2000px);
+    &.showIcon {
+      transform: translateX(0);
+    }
+  }
+@for $icon from 1 through 3 {
+    .showIcon:nth-child(#{$icon}) {
+      transition-delay: $icon * 0.7s;
+    }
+  }
+  .blick { 
+    transition: all .8s ease-out;
+    color: $text-color;
+ }

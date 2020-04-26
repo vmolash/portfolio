@@ -49,10 +49,10 @@ img {
           margin-right: 0;
         }
        }
-       a {
+       a { // view online link
          display:flex;
          margin-top: auto;
-         h4 { 
+         h4 {
           color: $heading-color; 
           transition: all .5s ease-in;
           &:hover { transform: scale(0.9); }
