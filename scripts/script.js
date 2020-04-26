@@ -19,25 +19,27 @@ CLICKEDCONTACTLINK.addEventListener('click', function() {
   SOCIALICONS.forEach(function(el) {
     el.classList.add('social-icon');
   })
-  setTimeout(changeColorPosition, 1500);
+  setTimeout(changeColorPosition, 1000);
+  
 })
+
 function changeColorPosition() {
+  SOCIALICONS.forEach(function(el) {
+    el.classList.add('showIcon');
+  });
   PARCONTACT[0].classList.add('active');
   setInterval(blickGreen, 5000);
 
   function blickGreen() {
     PARCONTACT[0].classList.toggle('blick');
   }
-  SOCIALICONS.forEach(function(el) {
-    el.classList.add('showIcon');
-  });
 }
 
 // Logo VM changes to Volha Molash when hover over on it
 const LOGONAME = document.querySelector('.logo');
 
 LOGONAME.addEventListener('mouseenter', function() {
-  this.innerHTML = 'Volha Molash';
+  this.innerHTML += 'Volha Molash';
   let stringName = this.textContent.split(' '); // convert to array
   let hoverName = '';
   for(let i = 0; i < stringName.length; i++) {

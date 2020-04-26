@@ -536,7 +536,7 @@ header {
 }
 
 header .logo {
-  width: 200px;
+  width: 180px;
 }
 
 header input[type=checkbox] {
@@ -904,10 +904,10 @@ section#contact::after {
 
 @keyframes scaleLogo {
   0% {
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -917,6 +917,10 @@ section#contact::after {
 
 .logo:hover {
   animation: scaleLogo 3s forwards;
+}
+
+.logo:after {
+  display: none;
 }
 
 .pr {
@@ -945,7 +949,7 @@ section#contact::after {
 
 .active {
   color: #93d293;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .cont a {
@@ -979,12 +983,12 @@ section#contact::after {
 }
 
 .appearArt {
-  animation: showSkills 3s both;
+  animation: showSkills 1.5s both;
 }
 
 .social-icon {
-  transition: all 2.1s ease;
-  transform: translateX(2000px);
+  transition: all 0.9s ease;
+  transform: translateX(3000px);
 }
 
 .social-icon.showIcon {
@@ -992,20 +996,20 @@ section#contact::after {
 }
 
 .showIcon:nth-child(1) {
-  transition-delay: 0.7s;
+  transition-delay: 0.3s;
 }
 
 .showIcon:nth-child(2) {
-  transition-delay: 1.4s;
+  transition-delay: 0.6s;
 }
 
 .showIcon:nth-child(3) {
-  transition-delay: 2.1s;
+  transition-delay: 0.9s;
 }
 
 .blick {
   color: #fff;
-  transition: all 0.5s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 ul {
