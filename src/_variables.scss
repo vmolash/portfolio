@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script&display=swap');
 
-$body-background:   #fefffa; // variable
+$body-background:   #fefffa;
+$header-border:     #e3e3e3;
 $text-color:        #fff;
 $heading-color:     rgb(147, 210, 147);
 $nav-background:    #444;
-$nav-color:         #fff;
-$list-hover:        lightyellow;
-$yellow:            rgb(147, 210, 147);
-$green:               rgb(42, 138, 42);
+$green:             rgb(42, 138, 42);
 $hover-icon-home:   #faa966;
-$light-heding:      #9dae8f;
+$light-orange:      #e1a87a;
+$light-heading:     #9dae8f;
 $dark-green:        #445436;
 $text-card:         #f5f5f5;
 $social:            #dedede;
+$dark-grey:         #666;
+$shadow-layer1:     rgba(0,0,0,0.16);
+$shadow-layer2:     rgba(0,0,0,0.12);
 
 $pd: 5px 10px 12px 15px 20px; // list property (It used at _media.scss, line #39)
 $roundness: 10px 0 20px 0; // list property. (It used at _media.scss, line #27)

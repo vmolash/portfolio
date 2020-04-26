@@ -1,7 +1,6 @@
-// top bar menu
 header {
-    background: #444;
-    border-bottom: 1px solid #e3e3e3;
+    background: $nav-background;
+    border-bottom: 1px solid $header-border;
     opacity: .85;
     position: fixed;
     top: 0;
@@ -39,7 +38,7 @@ header {
             @include break(0, 630px) { .logo { display: none; } }
             li {
                 border-radius: 5px;
-                @include linx($nav-color, $heading-color, $green);
+                @include linx($text-color, $heading-color, $green);
                 a { 
                     font-weight: bold;
                     display: block;
@@ -56,8 +55,8 @@ header {
                         display: grid;
                         justify-content: center;
                         align-items: center;
-                        width: 100px;
-                        height: 56px;
+                        width: 10rem;
+                        height: 5.6rem;
                         &.logo { padding: 0; }
                     }
                 }

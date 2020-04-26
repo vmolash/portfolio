@@ -20,7 +20,7 @@ body {
     }
 }
 footer a {
-    color: #fff;
+    color: $text-color;
     &:hover { color: $heading-color; }
 }
 header a { letter-spacing: .14em; }
@@ -30,7 +30,7 @@ header a { letter-spacing: .14em; }
     /* CSS Smooth Scroll */
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    // scroll-snap-type: y mandatory;
 }
 .container {
     margin: 0 auto;
@@ -49,7 +49,7 @@ p {
     color: $text-color;
     padding-bottom: nth($pd, 3);
     footer & {
-        color: $nav-color;
+        color: $text-color;
         padding: nth($pd, 2);
     }
 }
@@ -88,11 +88,11 @@ i { margin-right: 15px; }
 .name, .fact { color: $nav-background; }
 section#projects .light {
     color: $dark-green;
-    @include break(501px) { color: $light-heding; }
+    @include break(501px) { color: $light-heading; }
 }
-.light { color: $light-heding; }
+.light { color: $light-heading; }
 section#skills .light { padding-left: 4rem; }
-.home { @include break(630px) { color: #444; } }
+.home { @include break(630px) { color: $nav-background; } }
 .proj {
     display: grid;
     grid-gap: 1.8rem;

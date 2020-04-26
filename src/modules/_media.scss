@@ -77,7 +77,7 @@ section#home::after {
   background: $home-imageM;
   @include break(630px) { background: $home-imageD; }
   @include sectionImage;
-} 
+}
 section#skills::after {
   background: $skills-imageM;
   @include break(630px) { background: $skills-imageD; }

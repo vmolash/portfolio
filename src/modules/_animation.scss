@@ -1,4 +1,8 @@
 // Projects animation
+@keyframes scaleLogo { // Animation 
+    0% { transform: scale(.7); }
+    100% { transform: scale(1.1); }
+  }
 .logo {
     transition: all 0.3s ease-in-out;
     &:hover { animation: scaleLogo 3s infinite;  }
@@ -15,12 +19,16 @@
     @include heightWidth;
     transition: all .5s ease;
 }
-.show { // with js
+.activeCard { transform: translateY(-100%); } // Project card appears on click with js
+.show { // Mobile navigation menu with js
     height: 100%;
     overflow: hidden;
 }
-.activeCard { transform: translateY(-100%); } // with js
 .active { // header active link with js
     color:  $heading-color;
     transition: all 0.5s ease-in-out;
+}
+.cont a {
+    transition: all 0.6s ease-in-out; // Animation
+    &:hover { transform: scale(.85); }
 }
