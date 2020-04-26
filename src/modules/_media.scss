@@ -86,13 +86,20 @@ section#skills::after {
 }
 section#skills {
   height: 100%;
-  h2 { padding-top: 8rem;}
+  article:last-of-type { margin-bottom: 5.5rem; }
+  h2 { 
+    padding-top: 8rem;
+    @include break(1280px) { padding-top: 0; }
+  }
   h2.second { padding-top: 3rem; }
-  @include break(501px) {height: 100vh; align-items: center;}
+  @include break(411px) { height: 100vh; }
+  @include break(501px) { align-items: center;}
 }
 section#projects {
   height: 100%;
   .heading { padding-top: 8rem; }
+  @include break(1024px, 1279px) { height: 100vh; }
+  @include break(1920px) { height: 100vh; }
   @include break(501px) {
     align-items: center;
     .heading.light { 
@@ -102,6 +109,7 @@ section#projects {
   }
 }
 section#contact {
+  @include break(360px) { height: 100vh; }
   .container {
     display: flex;
     flex-direction: column;
