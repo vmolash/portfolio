@@ -1,11 +1,12 @@
 // Projects animation
 @keyframes scaleLogo { // Animation 
-    0% { transform: scale(.7); }
-    100% { transform: scale(1.1); }
+    0% { transform: scale(.6); }
+    100% { transform: scale(1); }
   }
 .logo {
     transition: all 0.3s ease-in-out;
     &:hover { animation: scaleLogo 3s forwards;  }
+    &:after { display: none; }
 }
 .pr {
     position: relative;
@@ -26,7 +27,7 @@
 }
 .active { // header active link with js
     color:  $heading-color;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 .cont a {
     transition: all 0.6s ease-in-out; // Animation
@@ -41,22 +42,22 @@
     100% { opacity: 1; }
 }
 .appearArt {
-    animation: showSkills 3s both;
+    animation: showSkills 1.5s both;
 }
 
 .social-icon {
-    transition: all 2.1s ease;
-    transform: translateX(2000px);
+    transition: all 0.9s ease;
+    transform: translateX(3000px);
     &.showIcon {
       transform: translateX(0);
     }
   }
 @for $icon from 1 through 3 {
     .showIcon:nth-child(#{$icon}) {
-      transition-delay: $icon * 0.7s;
+      transition-delay: $icon * 0.3s;
     }
 }
 .blick { 
     color: $text-color;
-    transition: all 0.5s ease-out;
+    transition: all 0.7s ease-out;
 }

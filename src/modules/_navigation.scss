@@ -7,7 +7,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    .logo { width: 200px; }
+    .logo { width: 180px; }
     @extend %bar; // extend shallow class bar
     input[type=checkbox] {
         position: absolute;
