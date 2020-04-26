@@ -714,7 +714,7 @@ section {
 }
 
 section#home::after {
-  background: url(././dist/images/homeM.jpg) no-repeat center center/cover;
+  background: url(../images/homeM.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
   opacity: 0.5;
@@ -727,12 +727,12 @@ section#home::after {
 
 @media (min-width: 630px) {
   section#home::after {
-    background: url(././dist/images/homeD.jpg) no-repeat center center/cover;
+    background: url(../images/homeD.jpg) no-repeat center center/cover;
   }
 }
 
 section#skills::after {
-  background: url(././dist/images/skillsM.jpg) no-repeat center center/cover;
+  background: url(../images/skillsM.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
   opacity: 0.5;
@@ -746,7 +746,7 @@ section#skills::after {
 
 @media (min-width: 630px) {
   section#skills::after {
-    background: url(././dist/images/skillsD.jpg) no-repeat center center/cover;
+    background: url(../images/skillsD.jpg) no-repeat center center/cover;
   }
 }
 
@@ -816,7 +816,7 @@ section#contact .heading {
 }
 
 section#projects::after {
-  background: url(././dist/images/projectsM.jpg) no-repeat center center/cover;
+  background: url(../images/projectsM.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
   opacity: 0.5;
@@ -829,12 +829,12 @@ section#projects::after {
 
 @media (min-width: 630px) {
   section#projects::after {
-    background: url(././dist/images/projectsD.jpg) no-repeat center center/cover;
+    background: url(../images/projectsD.jpg) no-repeat center center/cover;
   }
 }
 
 section#contact::after {
-  background: url(././dist/images/contactM.jpg) no-repeat center center/cover;
+  background: url(../images/contactM.jpg) no-repeat center center/cover;
   content: "";
   position: absolute;
   opacity: 0.5;
@@ -847,7 +847,7 @@ section#contact::after {
 
 @media (min-width: 630px) {
   section#contact::after {
-    background: url(././dist/images/contactD.jpg) no-repeat center center/cover;
+    background: url(../images/contactD.jpg) no-repeat center center/cover;
   }
 }
 
