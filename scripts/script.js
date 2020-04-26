@@ -13,12 +13,25 @@ for(let i = 0; i < NAVITEMS.length; i++) {
 // Paragraph on the Coctact section changes text color to green with delay
 const CLICKEDCONTACTLINK = document.querySelector('[href="#contact"]');
 const PARCONTACT = document.getElementsByClassName('connect');
+const SOCIALICONS = document.querySelectorAll(".icon");
+
 
 CLICKEDCONTACTLINK.addEventListener('click', function() {
-  setTimeout(changeColor, 2000);
+  SOCIALICONS.forEach(function(el) {
+    el.classList.add('social-icon');
+  })
+  setTimeout(changeColor, 1500);
 })
 function changeColor() {
   PARCONTACT[0].classList.add('active');
+  setInterval(blickGreen, 5000);
+
+  function blickGreen() {
+    PARCONTACT[0].classList.toggle('blick');
+  }
+  SOCIALICONS.forEach(function(el) {
+    el.classList.add('showIcon');
+  });
 }
 
 // Logo VM changes to Volha Molash when hover over on it
@@ -83,3 +96,19 @@ function hideRevealCard(e) {
     this.parentNode.classList.remove('activeCard');
 }
 
+// Skills section. When click on nav menu 'Skills', articles statrs to appear
+const CLICKEDSKILLSLINK = document.querySelector('[href="#skills"]');
+const ARTSKILLS = document.querySelectorAll('article');
+
+CLICKEDSKILLSLINK.addEventListener('click', function() {
+  ARTSKILLS.forEach(function(el) {
+    el.classList.add('disappearArt');
+  });
+  setTimeout(appearArticles, 1000);
+})
+function appearArticles() {
+  for(let i = 0; i < ARTSKILLS.length; i++) {
+    ARTSKILLS[i].classList.add('appearArt');
+    ARTSKILLS[i].classList.remove('disappearArt');
+  }
+}
