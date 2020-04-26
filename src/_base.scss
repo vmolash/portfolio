@@ -13,7 +13,7 @@ body {
     p, li, a, span { font-size: 2.2rem; }
     a {
         @extend %fz;
-        color: #dedede;
+        color: $social;
         text-decoration: none;
         transition: all .3s ease-out;
         &:hover, &:active {  color: $heading-color; }

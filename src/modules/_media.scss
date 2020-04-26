@@ -1,22 +1,22 @@
 // images
-$home-imageD: url(../../dist/images/homeD.jpg) no-repeat
+$home-imageD: url(././dist/images/homeD.jpg) no-repeat
 center center/cover;
-$home-imageM: url(../../dist/images/homeM.jpg) no-repeat
-center center/cover;
-
-$skills-imageD: url(../../dist/images/skillsD.jpg) no-repeat
-center center/cover;
-$skills-imageM: url(../../dist/images/skillsM.jpg) no-repeat
+$home-imageM: url(././dist/images/homeM.jpg) no-repeat
 center center/cover;
 
-$projects-imageD: url(../../dist/images/projectsD.jpg) no-repeat
+$skills-imageD: url(././dist/images/skillsD.jpg) no-repeat
 center center/cover;
-$projects-imageM: url(../../dist/images/projectsM.jpg) no-repeat
+$skills-imageM: url(././dist/images/skillsM.jpg) no-repeat
 center center/cover;
 
-$contact-imageD: url(../../dist/images/contactD.jpg) no-repeat
+$projects-imageD: url(././dist/images/projectsD.jpg) no-repeat
 center center/cover;
-$contact-imageM: url(../../dist/images/contactM.jpg) no-repeat
+$projects-imageM: url(././dist/images/projectsM.jpg) no-repeat
+center center/cover;
+
+$contact-imageD: url(././dist/images/contactD.jpg) no-repeat
+center center/cover;
+$contact-imageM: url(././dist/images/contactM.jpg) no-repeat
 center center/cover;
 
 img {
