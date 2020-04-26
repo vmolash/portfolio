@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! made by Volha Molash */
 @import url("https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -629,6 +630,33 @@ header nav ul li a {
   }
 }
 
+@media (min-width: 501px) {
+  nav a {
+    position: relative;
+    cursor: pointer;
+  }
+  nav a:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    bottom: 8px;
+    width: 0;
+    /*задаём длинну линии до наведения курсора*/
+    height: 2px;
+    /*задаём ширину линии*/
+    background-color: #93d293;
+    /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out;
+    /*задаём время анимации*/
+  }
+  nav a:hover:after, nav a:focus:after {
+    width: 100%;
+    /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -888,7 +916,7 @@ section#contact::after {
 }
 
 .logo:hover {
-  animation: scaleLogo 3s infinite;
+  animation: scaleLogo 3s forwards;
 }
 
 .pr {
