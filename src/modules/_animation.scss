@@ -41,7 +41,7 @@
     100% { opacity: 1; }
 }
 .appearArt {
-    animation: showSkills 3s 1;
+    animation: showSkills 3s both;
 }
 
 .social-icon {
@@ -55,8 +55,8 @@
     .showIcon:nth-child(#{$icon}) {
       transition-delay: $icon * 0.7s;
     }
-  }
-  .blick { 
-    transition: all .8s ease-out;
+}
+.blick { 
     color: $text-color;
- }
+    transition: all 0.5s ease-out;
+}
