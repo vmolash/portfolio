@@ -951,7 +951,7 @@ section#contact::after {
 }
 
 .appearArt {
-  animation: showSkills 3s 1;
+  animation: showSkills 3s both;
 }
 
 .social-icon {
@@ -976,8 +976,8 @@ section#contact::after {
 }
 
 .blick {
-  transition: all .8s ease-out;
   color: #fff;
+  transition: all 0.5s ease-out;
 }
 
 ul {

@@ -10,19 +10,18 @@ for(let i = 0; i < NAVITEMS.length; i++) {
   });
 }
 
-// Paragraph on the Coctact section changes text color to green with delay
+// Paragraph on the Coctact section changes text color to green with delay and Social icons appear from left side
 const CLICKEDCONTACTLINK = document.querySelector('[href="#contact"]');
 const PARCONTACT = document.getElementsByClassName('connect');
 const SOCIALICONS = document.querySelectorAll(".icon");
-
 
 CLICKEDCONTACTLINK.addEventListener('click', function() {
   SOCIALICONS.forEach(function(el) {
     el.classList.add('social-icon');
   })
-  setTimeout(changeColor, 1500);
+  setTimeout(changeColorPosition, 1500);
 })
-function changeColor() {
+function changeColorPosition() {
   PARCONTACT[0].classList.add('active');
   setInterval(blickGreen, 5000);
 
@@ -40,7 +39,6 @@ const LOGONAME = document.querySelector('.logo');
 LOGONAME.addEventListener('mouseenter', function() {
   this.innerHTML = 'Volha Molash';
   let stringName = this.textContent.split(' '); // convert to array
-  console.log(stringName);
   let hoverName = '';
   for(let i = 0; i < stringName.length; i++) {
     hoverName += stringName[i].charAt(0) + stringName[i].slice(1).toLowerCase() + ' ';
@@ -96,7 +94,7 @@ function hideRevealCard(e) {
     this.parentNode.classList.remove('activeCard');
 }
 
-// Skills section. When click on nav menu 'Skills', articles statrs to appear
+// Skills section. When click on nav menu 'Skills', articles start to appear
 const CLICKEDSKILLSLINK = document.querySelector('[href="#skills"]');
 const ARTSKILLS = document.querySelectorAll('article');
 
@@ -109,6 +107,5 @@ CLICKEDSKILLSLINK.addEventListener('click', function() {
 function appearArticles() {
   for(let i = 0; i < ARTSKILLS.length; i++) {
     ARTSKILLS[i].classList.add('appearArt');
-    ARTSKILLS[i].classList.remove('disappearArt');
   }
 }
