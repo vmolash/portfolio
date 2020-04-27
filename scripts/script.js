@@ -37,17 +37,9 @@ function changeColorPosition() {
 
 // Logo VM changes to Volha Molash when hover over on it
 const LOGONAME = document.querySelector('.logo');
-const FIRSTNAME = document.querySelector('.first-name');
-const LASTNAME = document.querySelector('.last-name');
 
 LOGONAME.addEventListener('mouseenter', function() {
   this.innerHTML = 'Volha Molash';
-  let stringName = this.textContent.split(' '); // convert to array
-  let hoverName = '';
-  for(let i = 0; i < stringName.length; i++) {
-    hoverName += stringName[i].charAt(0) + stringName[i].slice(1).toLowerCase() + ' ';
-  }
-  this.innerHTML = hoverName;
   this.style.transition = "all 1s ease-out";
 });
 LOGONAME.addEventListener('mouseout', function() {
