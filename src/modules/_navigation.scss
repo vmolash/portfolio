@@ -38,7 +38,7 @@ header {
             @include break(0, 630px) { .logo { display: none; } }
             li {
                 border-radius: nth($pd,1);
-                @include linx($text-color, $heading-color, $green);
+                @include linx($text-color, $heading-color, $heading-color);
                 a { 
                     font-weight: bold;
                     display: block;
@@ -68,21 +68,21 @@ header {
 nav a {
 	@include break(501px) {
         position: relative;
-    cursor: pointer;
-    &:after {
-        display: block;
-        position: absolute;
-        left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-        bottom: 8px;
-        width: 0;/*задаём длинну линии до наведения курсора*/
-        height: 2px; /*задаём ширину линии*/
-        background-color:$heading-color; /*задаём цвет линии*/
-        content: "";
-        transition: width 0.3s ease-out; /*задаём время анимации*/
-    }
-    &:hover:after,
-    &:focus:after {
-        width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
-    }
+        cursor: pointer;
+        &:after {
+            display: block;
+            position: absolute;
+            left: 0; // if change to right=0 - direction changes from right to left
+            bottom: 8px;
+            width: 0;// length before hover over
+            height: 2px; // length of line
+            background-color:$heading-color; // line color
+            content: "";
+            transition: width 0.3s ease-out; // Animation
+        }
+        &:hover:after,
+        &:focus:after {
+            width: 100%; // to completely underline the hover link 
+        }
     }
 }

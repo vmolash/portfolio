@@ -1,11 +1,11 @@
 // Projects animation
 @keyframes scaleLogo { // Animation 
-    0% { transform: scale(.6); }
+    0% { transform: scale(.5); }
     100% { transform: scale(1); }
   }
 .logo {
     transition: all 0.3s ease-in-out;
-    &:hover { animation: scaleLogo 3s forwards;  }
+    &:hover { animation: scaleLogo 2s forwards;  }
     &:after { display: none; }
 }
 .pr {

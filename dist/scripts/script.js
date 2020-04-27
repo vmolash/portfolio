@@ -37,9 +37,11 @@ function changeColorPosition() {
 
 // Logo VM changes to Volha Molash when hover over on it
 const LOGONAME = document.querySelector('.logo');
+const FIRSTNAME = document.querySelector('.first-name');
+const LASTNAME = document.querySelector('.last-name');
 
 LOGONAME.addEventListener('mouseenter', function() {
-  this.innerHTML += 'Volha Molash';
+  this.innerHTML = 'Volha Molash';
   let stringName = this.textContent.split(' '); // convert to array
   let hoverName = '';
   for(let i = 0; i < stringName.length; i++) {
@@ -48,8 +50,8 @@ LOGONAME.addEventListener('mouseenter', function() {
   this.innerHTML = hoverName;
   this.style.transition = "all 1s ease-out";
 });
-LOGONAME.addEventListener('mouseout', function(e) {
-  e.target.innerHTML = 'VM';
+LOGONAME.addEventListener('mouseout', function() {
+  this.innerHTML = 'VM';
 });
 
 // Hide navigation on mobile version when click on any link
@@ -75,7 +77,7 @@ if(window.screen.width > 630) {
 // PROJECT card animation 
 const CARDCONTENT = document.getElementsByClassName('card-content'); // all div.card-content
 const CARDREVEAL = document.querySelectorAll('.card-reveal h4'); // all h4 of div.card-reveal
-console.log(CARDREVEAL);
+
 for(let i = 0; i < CARDCONTENT.length; i++) {
   CARDCONTENT[i].addEventListener('click', revealCard);
 }
