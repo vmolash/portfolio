@@ -10,7 +10,7 @@ for(let i = 0; i < NAVITEMS.length; i++) {
   });
 }
 
-// Paragraph on the Coctact section changes text color to green with delay and Social icons appear from left side
+// Paragraph on the Coctact section changes text color to green with delay and Social icons appear from right side
 const CLICKEDCONTACTLINK = document.querySelector('[href="#contact"]');
 const PARCONTACT = document.getElementsByClassName('connect');
 const SOCIALICONS = document.querySelectorAll(".icon");
