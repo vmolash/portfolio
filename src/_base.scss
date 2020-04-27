@@ -59,7 +59,8 @@ p {
     font-weight: 400;
 }
 h1, .name {
-    font-size: 4rem;
+    font-size: 3rem;
+    @include break(360px) { font-size: 4rem; }
     opacity: .9;
     @extend %h;
     @include break(501px) {
