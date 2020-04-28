@@ -70,6 +70,7 @@ h1, .name {
 }
 h2, .fact {
     font-size: 2.4rem;
+    line-height: 1.4;
     @include break(360px) { font-size: 3rem; }
     opacity: .9;
     @extend %h;
