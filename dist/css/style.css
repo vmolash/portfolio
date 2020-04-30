@@ -484,8 +484,17 @@ h2, .fact {
   text-shadow: 2px 2px #000;
 }
 
-i {
-  margin-right: 15px;
+.card-reveal {
+  position: relative;
+}
+
+.card-reveal i {
+  color: #e1a87a;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  cursor: pointer;
 }
 
 .name, .fact {
