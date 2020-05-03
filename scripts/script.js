@@ -68,7 +68,7 @@ if(window.screen.width > 630) {
 
 // PROJECT card animation 
 const CARDCONTENT = document.getElementsByClassName('card-content'); // all div.card-content
-const CARDREVEAL = document.querySelectorAll('.card-reveal h4'); // all h4 of div.card-reveal
+const CARDREVEAL = document.querySelectorAll('.card-reveal i'); // all i of div.card-reveal
 
 for(let i = 0; i < CARDCONTENT.length; i++) {
   CARDCONTENT[i].addEventListener('click', revealCard);
