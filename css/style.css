@@ -375,6 +375,10 @@ header a {
   letter-spacing: .14em;
 }
 
+i {
+  margin-right: 1.3rem;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -491,10 +495,12 @@ h2, .fact {
 .card-reveal i {
   color: #e1a87a;
   font-size: 1.5rem;
+  font-weight: 600;
   position: absolute;
   top: 9px;
   right: 10px;
   cursor: pointer;
+  margin-right: 0;
 }
 
 .name, .fact {
@@ -699,19 +705,11 @@ img {
 
 .proj div.card-reveal h4 {
   color: #faa966;
-  cursor: pointer;
   font-family: Roboto, sans-serif;
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: .7rem;
   margin-left: 1.3rem;
-}
-
-.proj div.card-reveal h4 i {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-left: 1rem;
-  margin-right: 0;
 }
 
 .proj div.card-reveal a {
@@ -1107,7 +1105,7 @@ ul.tech li:hover {
 
 .cont li a {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-items: flex-start;
 }
 
