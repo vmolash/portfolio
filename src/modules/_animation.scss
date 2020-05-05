@@ -41,18 +41,20 @@
     75% { opacity: .75; }
     100% { opacity: 1; }
 }
-.appearArt {
+#skills .appear {
     animation: showSkills 1.5s both;
 }
-.social-icon {
+.icon {
     transition: all 0.9s ease;
-    transform: translateX(3000px);
-    &.showIcon {
+    transform: translateX(100px);
+    opacity: 0;
+    &.appear {
       transform: translateX(0);
+      opacity: 1;
     }
   }
 @for $icon from 1 through 3 {
-    .showIcon:nth-child(#{$icon}) {
+    .icon.appear:nth-child(#{$icon}) {
       transition-delay: $icon * 0.3s;
     }
 }

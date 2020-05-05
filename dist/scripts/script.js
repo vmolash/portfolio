@@ -16,16 +16,16 @@ const PARCONTACT = document.getElementsByClassName('connect');
 const SOCIALICONS = document.querySelectorAll(".icon");
 
 CLICKEDCONTACTLINK.addEventListener('click', function() {
-  SOCIALICONS.forEach(function(el) {
-    el.classList.add('social-icon');
-  })
+  // SOCIALICONS.forEach(function(el) {
+  //   el.classList.add('social-icon');
+  // })
   setTimeout(changeColorPosition, 1000);
   
 })
 
 function changeColorPosition() {
   SOCIALICONS.forEach(function(el) {
-    el.classList.add('showIcon');
+    el.classList.add('appearArt');
   });
   PARCONTACT[0].classList.add('active');
   setInterval(blickGreen, 5000);
@@ -102,7 +102,7 @@ CLICKEDSKILLSLINK.addEventListener('click', function() {
 })
 function appearArticles() {
   for(let i = 0; i < ARTSKILLS.length; i++) {
-    ARTSKILLS[i].classList.add('appearArt');
+    ARTSKILLS[i].classList.add('appear');
   }
 }
 
@@ -118,7 +118,7 @@ const faders = document.querySelectorAll('article');
             if(!entry.isIntersecting) { // if not true
                 return;
             } else {
-                entry.target.classList.add('appearArt');
+                entry.target.classList.add('appear');
                 appearOnScroll.unobserve(entry.target); // it's not nessesary, because we don't use toggle class, we just add class
             }
         });
@@ -127,3 +127,7 @@ const faders = document.querySelectorAll('article');
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     })
+    SOCIALICONS.forEach(icon => {
+      appearOnScroll.observe(icon);
+    })
+
