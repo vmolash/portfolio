@@ -105,3 +105,25 @@ function appearArticles() {
     ARTSKILLS[i].classList.add('appearArt');
   }
 }
+
+// SCROLLING
+const faders = document.querySelectorAll('article');
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) { // if not true
+                return;
+            } else {
+                entry.target.classList.add('appearArt');
+                appearOnScroll.unobserve(entry.target); // it's not nessesary, because we don't use toggle class, we just add class
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    })
