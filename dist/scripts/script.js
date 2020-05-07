@@ -131,3 +131,31 @@ const faders = document.querySelectorAll('article');
       appearOnScroll.observe(icon);
     })
 
+
+    const mainSections = document.querySelectorAll('section');
+    const appearSections = {
+      threshold: 0,
+      rootMargin: '0px 0px -200px 0px'
+  };
+
+  
+    const activeOnScroll = new IntersectionObserver(function(entries, activeOnScroll){
+      
+      entries.forEach(entry => {
+        let id = entry.target.id;
+        let link = document.querySelector('[href="#'+id+'"');
+          if(!entry.isIntersecting) { // if not true
+              return;
+          } else {
+            let current = document.getElementsByClassName('active');
+            current[0].className = current[0].className.replace(' active', '');
+            link.classList.add('active');
+          }
+      });
+  }, appearSections);
+  
+  mainSections.forEach(section => {
+    activeOnScroll.observe(section);
+  })
+
+
