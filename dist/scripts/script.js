@@ -51,6 +51,25 @@ console.log(window.screen.width);
 const NAVIGAT = document.querySelector('nav');
 const LAB = document.querySelector('label');
 
+
+// function navMobile() {
+//   if(window.screen.width < 500) {
+//     LAB.addEventListener('click', function() {
+//       NAVIGAT.classList.toggle('show');
+//     });
+//     NAVIGAT.addEventListener('click', function() {
+//       this.classList.toggle('show');
+//     });
+//   }
+  // if(window.screen.width >= 500 && window.screen.width <=630) {
+
+  // }
+//   if(window.screen.width > 630) {
+//     HOME.parentNode.removeChild(HOME);
+//   }
+// }
+// window.onresize = navMobile;
+
 if(window.screen.width < 500) {
   LAB.addEventListener('click', function() {
     NAVIGAT.classList.toggle('show');
