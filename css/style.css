@@ -1043,7 +1043,6 @@ ul.tech {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   opacity: .7;
   color: #444;
-  cursor: pointer;
   display: grid;
   border: solid 1px #e1a87a;
   grid-template-columns: 1fr;
